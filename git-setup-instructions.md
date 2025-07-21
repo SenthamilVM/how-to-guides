@@ -115,6 +115,15 @@ rd /s /q .git
 
 Then repeat the above steps to reinitialize and push again.
 
+```
+| Part   | Meaning                                                              |
+| ------ | -------------------------------------------------------------------- |
+| `rd`   | Remove Directory                                                     |
+| `/s`   | Delete all subfolders and files inside it (recursive)                |
+| `/q`   | Quiet mode — no confirmation prompts                                 |
+| `.git` | The hidden folder Git uses to track changes, remotes, branches, etc. |
+```
+- NOTE: Actual files inside the folder will NOT be deleted.
 ---
 
 Happy coding! 🚀
