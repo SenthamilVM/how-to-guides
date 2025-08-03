@@ -126,4 +126,29 @@ Then repeat the above steps to reinitialize and push again.
 - NOTE: Actual files inside the folder will NOT be deleted.
 ---
 
+### ⚠️ Git Push Rejection Fix
+
+! [rejected]        main -> main (fetch first)
+- error: failed to push some refs to 'https://github.com/username/repo'
+- hint: Updates were rejected because the remote contains work that you do not
+- hint: have locally. This is usually caused by another repository pushing to
+- hint: the same ref. If you want to integrate the remote changes, use
+- hint: 'git pull' before pushing again.
+
+- This may happen when you created a repo with README and you local doesn't have this. 
+- Even if your local has this README file, it may not sync causing this error
+
+
+#### ✅ The Fix?
+
+Pull the remote changes first using rebase, then push:
+
+```
+git pull origin main --rebase
+git push origin main
+
+NOTE: git pull origin main --rebase pulls the remote changes and re-applies your local changes on top of them
+```
+---
+
 Happy coding! 🚀
